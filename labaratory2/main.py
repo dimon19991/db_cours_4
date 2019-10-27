@@ -1,13 +1,13 @@
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
-from Labaratory2.forms.person_form import PersonForm
-from Labaratory2.forms.function_form import FunctionForm
-from Labaratory2.forms.tectcase_form import TestCaseForm
+from labaratory2.forms.person_form import PersonForm
+from labaratory2.forms.function_form import FunctionForm
+from labaratory2.forms.tectcase_form import TestCaseForm
 from sqlalchemy.sql import func
 import plotly
 import json
 import plotly.graph_objs as go
-from Labaratory2.dao.orm.model import *
+from labaratory2.dao.orm.model import *
 
 app = Flask(__name__)
 app.config.update(dict(
