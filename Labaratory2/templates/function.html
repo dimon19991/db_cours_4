@@ -1,0 +1,43 @@
+
+
+{% extends "index.html" %}
+
+{% block content %}
+
+
+
+ <div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Function name</th>
+                <th scope="col">Person text</th>
+                <th scope="col">Count of test</th>
+                <th scope="col">Person login</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for function in functions %}
+            <tr >
+                <td> {{function.function_name}} </td>
+                <td> {{function.person_text}} </td>
+                <td> {{function.counter_of_tests}} </td>
+                <td> {{function.person_login_fk}} </td>
+                <td>
+                    <button type="button" class="btn btn-warning" name="btn_edit_function" data-function_name="{{function.function_name}}">Edit</button>
+                    <button type="button" class="btn btn-danger" name="btn_delete_function" data-function_name="{{function.function_name}}">Delete</button>
+                    <button type="button" class="btn btn-success" name="btn_new_testcase" data-function_name="{{function.function_name}}">New test case</button>
+                </td>
+            </tr>
+
+        {% endfor %}
+<!--            <tr>-->
+<!--                <td> <button type="button" class="btn btn-success" name="btn_new_function">New Function</button> </td>-->
+<!--            </tr>-->
+        </tbody>
+    </table>
+ </div>
+
+    <script src="{{ url_for('static', filename='js/function.js') }}"></script>
+
+{% endblock %}

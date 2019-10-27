@@ -1,0 +1,46 @@
+
+
+{% extends "index.html" %}
+
+{% block content %}
+
+
+
+ <div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Person login</th>
+                <th scope="col">Person password</th>
+                <th scope="col">Person name</th>
+                <th scope="col">Person surname</th>
+                <th scope="col">Person email</th>
+                <th scope="col">Person birthday</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for person in persons %}
+            <tr >
+                <td> {{person.person_login}} </td>
+                <td> {{person.person_password}} </td>
+                <td> {{person.person_name}} </td>
+                <td> {{person.person_surname}} </td>
+                <td> {{person.person_email}} </td>
+                <td> {{person.person_birthday}} </td>
+                <td>
+                    <button type="button" class="btn btn-warning" name="btn_edit_person" data-person_login="{{person.person_login}}">Edit</button>
+                    <button type="button" class="btn btn-danger" name="btn_delete_person" data-person_login="{{person.person_login}}">Delete</button>
+                    <button type="button" class="btn btn-success" name="btn_new_function" data-person_login="{{person.person_login}}">New function</button>
+                </td>
+            </tr>
+        {% endfor %}
+            <tr>
+                <td> <button type="button" class="btn btn-success" name="btn_new_person">New Person</button> </td>
+            </tr>
+        </tbody>
+    </table>
+ </div>
+
+    <script src="{{ url_for('static', filename='js/person.js') }}"></script>
+
+{% endblock %}
