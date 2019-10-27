@@ -1,1 +1,1 @@
-web: gunicorn Labaratory2.main:main --log-file -
+web: gunicorn Labaratory2.main:app --log-file -
