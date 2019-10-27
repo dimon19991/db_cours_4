@@ -1,4 +1,4 @@
-from main import db
+from labaratory2.main import db
 
 
 class ormPersons(db.Model):

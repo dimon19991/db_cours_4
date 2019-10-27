@@ -1,4 +1,4 @@
-from dao.orm.model import *
+from labaratory2.dao.orm.model import *
 
 db.create_all()
 

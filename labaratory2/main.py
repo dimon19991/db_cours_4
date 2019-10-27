@@ -7,7 +7,7 @@ from sqlalchemy.sql import func
 import plotly
 import json
 import plotly.graph_objs as go
-from labaratory2.dao.orm.model import *
+# from labaratory2.dao.orm.model import *
 
 app = Flask(__name__)
 app.config.update(dict(
@@ -16,7 +16,6 @@ app.config.update(dict(
 ))
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:01200120@localhost/Testing'
 # db = SQLAlchemy(app)
-
 
 
 @app.route('/', methods=['GET', 'POST'])
