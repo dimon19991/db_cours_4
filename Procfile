@@ -1,0 +1,1 @@
+web: gunicorn Labaratory2.mainl:app --log-file -
