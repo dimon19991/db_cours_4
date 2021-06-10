@@ -9,7 +9,7 @@ cx-Oracle==6.3
 cycler==0.10.0
 decorator==4.3.0
 defusedxml==0.6.0
-Django==2.0.5
+Django==2.2.24
 doxypypy==0.8.8.6
 entrypoints==0.3
 Flask==1.1.1
