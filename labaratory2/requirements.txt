@@ -62,7 +62,7 @@ PyScreeze==0.1.22
 python-dateutil==2.8.0
 PyTweening==1.0.3
 pytz==2018.4
-pywin32==225
+pywin32==301
 pywinpty==0.5.5
 PyYAML==3.13
 pyzmq==18.1.0
